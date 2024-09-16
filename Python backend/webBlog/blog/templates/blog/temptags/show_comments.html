@@ -1,0 +1,17 @@
+<div class="comments-section">
+    <h3>Комментарии</h3>
+    {% for comment in comments %}
+        <div class="comment">
+        <span class="comment-author">Комментарий: {{ comment.id }}</span><br>
+            {% if comment.author %}
+                <span class="comment-author">Автор: <a href="{{ comment.author.get_absolute_url }}">
+                    {{ comment.author.username }}
+                </a></span><br>
+                {% else %}
+                <span class="comment-author">Автор: Anonymous</span><br>
+            {% endif %}
+        <span class="comment-date">Дата: {{ comment.comment_created }}</span>
+        <p class="comment-content">{{ comment.comment }}</p>
+    </div>
+    {% endfor %}
+</div>

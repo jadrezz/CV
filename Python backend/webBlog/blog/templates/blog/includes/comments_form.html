@@ -1,0 +1,26 @@
+<div class="comment-form">
+<h3>Добавить комментарий</h3>
+{% if messages %}
+    {% for message in messages %}
+        {% if 'CommentLeft' in message.extra_tags %}
+        <div class="flash-new">{{ message }}</div>
+        {% endif %}
+    {% endfor %}
+    <br>
+{% endif %}
+<div class="form-errors">{{ form.non_field_errors }}</div>
+{% if not comment_left or user.is_authenticated %}
+    <form action="" method="post">
+    {% csrf_token %}
+    {% for f in form %}
+        <label class="form-label" id="{{ f.id_for_label }}">{{ f.label }}</label>
+        {{ f }}
+        <div class="form-errors">{{ f.errors }}</div>
+    {% endfor %}
+    <button type="submit">Отправить</button>
+</form>
+    {% elif comment_left and not messages and not user.is_authenticated %}
+    <p class="comment-done">Комментарий уже был оставлен!</p>
+{% endif %}
+</div>
+

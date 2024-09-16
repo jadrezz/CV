@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% block content %}
+    <form class="auth-form" method="post">
+    {% csrf_token %}
+        <div class="errors">
+            {{ form.non_field_errors }}
+        </div>
+        {% for f in form %}
+            <div class="form-errors">{{ f.errors }}</div>
+            <label id="{{ f.id_for_label }}">{{ f.label }}</label>
+            {{ f }}<br>
+        {% endfor %}
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock %}

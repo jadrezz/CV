@@ -1,0 +1,15 @@
+<ul>
+    {% if posts.has_previous %}
+        <li class="paginator button"><a href="?page={{ posts.previous_page_number }}">&lt;-</a></li>
+    {% endif %}
+    {% for p in paginator.page_range %}
+        {% if posts.number == p %}
+            <li class="paginator selected"><a>{{ p }}</a></li>
+            {% elif p >= posts.number|add:-1 and p <= posts.number|add:1 %}
+            <li class="paginator"><a href="?page={{ p }}">{{ p }}</a></li>
+        {% endif %}
+    {% endfor %}
+    {% if posts.has_next %}
+        <li class="paginator button"><a href="?page={{ posts.next_page_number }}">-&gt;</a></li>
+    {% endif %}
+</ul>

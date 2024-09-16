@@ -1,0 +1,5 @@
+<ul>
+    {% for cat in categories %}
+        <li><a href="{{ cat.get_absolute_url }}">{{ cat.cat_name }}({{ cat.total }})</a></li>
+    {% endfor %}
+</ul>

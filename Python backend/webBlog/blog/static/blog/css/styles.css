@@ -1,0 +1,225 @@
+.article {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.article h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.article .date {
+    color: #999;
+    font-style: italic;
+}
+
+.article .author {
+    color: #555;
+}
+
+.article .views {
+    color: #777;
+}
+
+.article .info {
+    margin-top: 15px;
+}
+
+.article .info span {
+    display: block;
+}
+
+.article .read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.article .read-more:hover {
+    background-color: #0056b3;
+}
+
+.top-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: flex;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+
+
+.meta-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.category-tag {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.date-tag {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.author-tag {
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 5px;
+}
+
+/* Стилизация формы */
+form {
+    max-width: 400px;
+    padding: 3em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+div.form-errors {
+    color: red;
+}
+
+/* Стилизация элементов формы */
+.form-label {
+    margin-bottom: .5em;
+    color: #333333;
+    margin-right: 10px;
+}
+
+input, textarea, select {
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: .25em;
+    margin-bottom: 1em;
+}
+
+/* Стилизация кнопки отправки */
+button[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: .25em;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.flash-new {
+    padding: 10px;
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.flash-new::before {
+    content: "\2714"; /* Это символ "галочка" */
+    margin-right: 5px;
+}
+
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comment {
+    border: 1px solid #dcdcdc; /* Серая рамка */
+    padding: 10px;
+    margin-bottom: 15px; /* Отступ между комментариями */
+    background-color: #f9f9f9; /* Светло-серый фон */
+}
+
+.comment-author,
+.comment-date {
+    font-weight: bold; /* Выделение автора и даты комментария */
+}
+
+.comment-content {
+    margin-top: 5px;
+}
+ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы */
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    justify-content: center; /* Центрируем элементы */
+}
+
+.paginator {
+    margin: 0 5px; /* Отступы между элементами пагинации */
+}
+
+.paginator a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #007bff; /* Цвет текста */
+    padding: 10px 15px; /* Внутренние отступы */
+    border: 1px solid #007bff; /* Граница */
+    border-radius: 5px; /* Скругленные углы */
+    width: 40px; /* Фиксированная ширина */
+    height: 40px; /* Фиксированная высота */
+    display: flex; /* Используем flexbox для центрирования текста */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход при наведении */
+}
+
+.paginator a:hover {
+    background-color: #007bff; /* Цвет фона при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+.paginator.selected a {
+    background-color: #0056b3; /* Темнее цвет фона для выбранного элемента */
+    color: white; /* Цвет текста для выбранного элемента */
+    border-color: #0056b3; /* Темнее граница для выделенного элемента */
+}
+
+.auth-form{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.comment-done{
+    color: #e67e22;
+}

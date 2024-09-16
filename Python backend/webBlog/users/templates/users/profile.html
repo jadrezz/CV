@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    Профиль {{ user_profile.username }}
+{% endblock %}
+{% block content %}
+<div class="article">
+    <em>Профиль пользователя <strong>{{ user_profile.username }}</strong></em>
+    <p>Количество статей: <strong>{{ user_profile.posts.count }}</strong></p>
+    <p>Количество комментариев: <strong>{{ user_profile.comments.count }}</strong></p>
+    <p>Дата регистрации: <strong>{{ user_profile.date_joined }}</strong></p>
+    <p>Последний визит: <strong>{{ user_profile.last_login|default:"Неизвестно" }}</strong></p>
+    <p>Администратор: <strong>{{ user_profile.is_staff|yesno:"Да,Нет" }}</strong></p>
+</div>
+{% endblock %}

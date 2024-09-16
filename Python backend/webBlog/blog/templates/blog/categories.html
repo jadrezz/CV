@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_temptags %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    {% show_categories %}
+{% endblock %}

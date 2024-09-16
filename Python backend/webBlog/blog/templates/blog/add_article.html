@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Добавление статьи{% endblock %}
+{% block content %} 
+    <form method="post">
+    {% csrf_token %}
+        <div class="errors">
+        {{ form.non_field_errors }}
+        {% for f in form %}
+            <label class="form-label" id="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}
+            <div class="form-errors">{{ f.errors }}</div>
+        {% endfor %}
+    <button type="submit">Отправить</button>
+    </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<ul class="top-menu">
+    {% for m in menu %}
+        <li><a {% if selected_id != m.id %}href="{% url m.url %}"{% endif %}>{{ m.title }}</a></li>
+    {% endfor %}
+    <li>{% if user.is_authenticated %}<span class="auth"><a href="{{ user.get_absolute_url }}">Профиль {{ user.username }}</a> | <a href="{% url 'users:logout' %}">Выход</a></span>
+    {% else %}<a href="{% url 'users:login' %}">Авторизация</a> | <a href="{% url 'users:register' %}">Регистрация</a>{% endif %}</li>
+</ul>
+<hr>
+{% block content %}
+{% endblock %}
+</body>
+</html>
